@@ -41,7 +41,7 @@ public class QueueLinkedList {
 
     static public boolean isEmpty(){
 //        return size==0;
-        return front==null ;
+        return front==null;
     }
 
     public static void main(String[] args) {
