@@ -2,6 +2,8 @@ package Tree;
 
 import java.util.Scanner;
 
+import static Tree.PrintTree.printTree;
+
 public class firstTree {
     static Scanner sc = new Scanner(System.in);
     public static TreeNode<Integer> takeInput(){
@@ -18,19 +20,7 @@ public class firstTree {
         return root;
     }
 
-    public static void printTree(TreeNode<Integer> root){
 
-        String s = root.data+":";
-        int children = root.children.size();
-        for(int i=0;i<children;i++){
-            s +=root.children.get(i).data+",";
-        }
-        System.out.println(s);
-        for(int i=0;i<children;i++){
-           printTree(root.children.get(i));
-        }
-
-    }
     public static void main(String[] args) {
 
         TreeNode<Integer> root = new TreeNode<>(10);
