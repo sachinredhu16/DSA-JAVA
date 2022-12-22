@@ -3,7 +3,6 @@ package Tree;
 import static Tree.TreeInputLevelWise.takeInput;
 
 public class CountLeafNodes {
-
     public static int countLeafNodes(TreeNode<Integer> node ){
         if(node==null)
             return 0;
