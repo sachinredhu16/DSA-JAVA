@@ -17,7 +17,6 @@ public class LargestNode {
         return large;
 
     }
-
     public static void main(String[] args) {
 
         int large = largestNode(takeInput());

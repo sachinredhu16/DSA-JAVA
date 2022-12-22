@@ -35,7 +35,6 @@ public class firstTree {
 
         node1.children.add(node4);
 
-
         TreeNode<Integer> root1 = takeInput();
         printTree(root1);
     }

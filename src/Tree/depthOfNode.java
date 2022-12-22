@@ -16,7 +16,6 @@ public class depthOfNode {
             printAllDepth(node.children.get(i),depth-1);
         }
     }
-
     public static void main(String[] args) {
         printAllDepth(takeInput(),2);
     }

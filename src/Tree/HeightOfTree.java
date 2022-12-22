@@ -18,7 +18,6 @@ public class HeightOfTree {
         }
         return height+1;
     }
-
     public static void main(String[] args) {
         int height = heightOfTree(takeInput());
         System.out.println("Height is : "+height);

@@ -25,7 +25,6 @@ public class TreeInputLevelWise {
                 queue.add(child);
             }
         }
-
         return root;
     }
 

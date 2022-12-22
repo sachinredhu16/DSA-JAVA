@@ -14,7 +14,6 @@ public class NumberOfNodes {
 
         return count;
     }
-
     public static void main(String[] args) {
 
         int numberOfNodes = countNodes(takeInput());

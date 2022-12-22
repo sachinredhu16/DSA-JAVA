@@ -11,9 +11,7 @@ public class PreOrderTraversal {
         for(int i=0;i<node.children.size();i++){
             preOrder(node.children.get(i));
         }
-
     }
-
     public static void main(String[] args) {
         preOrder(takeInput());
     }

@@ -12,6 +12,5 @@ public class PrintTree {
         for(int i=0;i<children;i++){
             printTree(root.children.get(i));
         }
-
     }
 }
