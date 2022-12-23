@@ -4,7 +4,7 @@ public class ReverseStringWordWise {
     public static void main(String[] args) {
         String s= "Welcome to Coding Ninjas";
 
-        // using Array
+        // using LinearDataStructure.Array
         String [] arr = s.split(" ");
         String result="";
         for (int i=arr.length-1;i>=0;i--){
