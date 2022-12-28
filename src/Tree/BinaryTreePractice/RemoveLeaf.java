@@ -1,4 +1,4 @@
-package Tree.Practice;
+package Tree.BinaryTreePractice;
 
 import Tree.BinaryTree.BinaryTreeNode;
 
