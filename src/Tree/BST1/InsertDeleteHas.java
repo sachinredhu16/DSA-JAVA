@@ -3,12 +3,17 @@ package Tree.BST1;
 import Tree.BinaryTree.BinaryTreeNode;
 
 
-
-import java.net.Inet4Address;
-
 import static Tree.BinaryTree.PrintBinaryTree.printTree;
 
 public class InsertDeleteHas{
+
+    /* Time complexity of all operations :-
+        1. Insertion -->> O(height) -->> )(logn)
+        2. Searching -->> O(height)
+        3. Deletion -->> h(Search node for deletion)+h-k(search minNode of right side)+h-k(delete that)
+                        -->> O(height)
+    *
+    */
      static BinaryTreeNode<Integer> node;
 
     private static BinaryTreeNode<Integer> insertHelper(BinaryTreeNode<Integer> node, int n){
@@ -29,9 +34,41 @@ public class InsertDeleteHas{
         node = insertHelper(node,n);
     }
 
-    public static void delete(int n){
 
+    private static BinaryTreeNode<Integer> deleteHelper(BinaryTreeNode<Integer> node , int n){
+        if(node==null) {
+            BinaryTreeNode<Integer> t = new BinaryTreeNode<>(n);
+            return t;
+        }
+        if(node.data>n){
+            node.left  = deleteHelper(node.left,n);
+        }
+        else if(node.data<n){
+            node.right = deleteHelper(node.right,n);
+        }
+        else {
+            if(node.left==null && node.right==null)
+                return null;
+            else if(node.left==null)
+                node= node.right;
+            else if (node.right==null)
+                node = node.left;
+            else{
+                BinaryTreeNode<Integer> minNode = node.right;
+                while (minNode.left!=null)
+                    minNode = minNode.left;
+                node.data =  minNode.data;
+                node.right = deleteHelper(node.right,minNode.data);
+            }
+        }
+
+        return node;
     }
+    public static void delete(int n){
+        node = deleteHelper(node,n);
+    }
+
+
     private boolean hasDataHelper(BinaryTreeNode<Integer> node,int n){
         if(node==null)
             return false;
@@ -50,12 +87,18 @@ public class InsertDeleteHas{
     }
 
     public static void main(String[] args) {
-        insert(15);
-        insert(10);
         insert(20);
-        insert(17);
-        insert(1);
+        insert(10);
+        insert(30);
+        insert(5);
+        insert(15);
+        insert(25);
+        insert(40);
 
+
+        printTree(node);
+        delete(20);
+        System.out.println("After deletion ");
         printTree(node);
     }
 
