@@ -10,6 +10,6 @@ public class FabonacciNumber {
 
     }
     public static void main(String[] args) {
-        System.out.println(fabNumber(7));
+        System.out.println(fabNumber(6));
     }
 }
