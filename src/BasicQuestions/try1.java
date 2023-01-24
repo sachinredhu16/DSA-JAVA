@@ -1,26 +1,29 @@
 package BasicQuestions;
 
+
+import java.util.HashSet;
+
 public class try1 {
-    public static void increment(int i){
-        i++;
-    }
-    public static void increment(int []	arr)
-    {
-        for (int i=0;i<5;i++){
-            arr[i]++;
-        }
-    }
     public static void main(String[] args) {
-    int num=10;
+        int n = 5;
+        int[] A = {1,2,3,4,5};
+       String str = "wefiuw";
+        HashSet<Integer> basket1 = new HashSet<>();
+        HashSet<Integer> basket2 = new HashSet<>();
+        int size =0;
 
-    increment(num);
-    System.out.println("Element is :- "+num);
-
-
-    int[] arr = {1,2,3,4,5};
-    increment(arr);
-        for (int element:arr) {
-            System.out.print(element+" ");
+        for(int i=0;i<n;i++){
+            if(basket1.contains(A[i])){
+                if (!basket2.contains(A[i])){
+                    basket2.add(A[i]);
+                }
+            }
+            else{
+                basket1.add(A[i]);
+            }
         }
+        size = basket1.size()+ basket2.size();
+        System.out.println(size);
+
     }
 }
