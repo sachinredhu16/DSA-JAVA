@@ -11,6 +11,7 @@ public class QueueCollection {
         queue.add(30);
         queue.remove();
 
+
         while (!queue.isEmpty()){
             System.out.print(queue.remove()+" ");
         }
