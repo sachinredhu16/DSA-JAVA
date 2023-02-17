@@ -14,7 +14,7 @@ class MinHeapComparator implements Comparator<Integer>{
         return 0;
     }
 }
-public class InbuiltPriorityQueue {
+public class MinInbuiltPriorityQueue {
     public static void main(String[] args) {
         MinHeapComparator minHeapComparator = new MinHeapComparator();
         PriorityQueue<Integer> pq = new PriorityQueue<>(minHeapComparator);

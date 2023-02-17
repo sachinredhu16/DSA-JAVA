@@ -2,10 +2,10 @@ package PriorityQueue;
 
 import java.util.ArrayList;
 
-public class PriorityQueue {
+public class MinHeapTree {
     private ArrayList<Integer> heap;
 
-    PriorityQueue() {
+    MinHeapTree() {
         heap = new ArrayList<>();
     }
 
