@@ -24,7 +24,7 @@ public class MinHeapTree {
         int child = heap.size() - 1;
         int parent = (child - 1) / 2;
         while (child > 0) {
-            if (heap.get(parent) > heap.get(child)) {
+            if (heap.get(child) < heap.get(parent)) {
                 int temp = heap.get(parent);
                 heap.set(parent, heap.get(child));
                 heap.set(child, temp);

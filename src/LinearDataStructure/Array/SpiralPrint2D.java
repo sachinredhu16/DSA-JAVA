@@ -1,41 +1,42 @@
 package LinearDataStructure.Array;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SpiralPrint2D {
     public static void main(String[] args) {
         // this is not optimized because of O(N*N)
-        int[][] arr = {
-                {1,2,3,4},
-                {5,6,7,8},
-                {9,10,11,12},
-                {13,14,15,16} };
-        int row = arr.length;
-        int col = arr[0].length;
+        List<Integer> list = new ArrayList<>();
+        int[][] matrix = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
         int rowStart =0;
         int colStart =0;
-        int elements = row*col; int count =0;
+        int row = matrix.length;
+        int col = matrix[0].length;
+        int t = row*col; int c=0;
         int i;
-        while (count<elements){
-            for( i=colStart;i<col;i++){
-                System.out.print(arr[rowStart][i]+" ");
-                count++;
+        while(c<t){
+            for(i =colStart;i<col && c<t;i++){
+                list.add(matrix[rowStart][i]);
+                c++;
             }
             rowStart++;
-            for( i=rowStart;i<row;i++){
-                System.out.print(arr[i][col-1]+" ");
-                count++;
+            for(i = rowStart;i<row && c<t;i++){
+                list.add(matrix[i][col-1]);
+                c++;
             }
             col--;
-            for(i = col-1;i>=colStart;i--){
-                System.out.print(arr[row-1][i]+" ");
-                count++;
+            for(i =col-1;i>=colStart && c<t;i--){
+                list.add(matrix[row-1][i]);
+                c++;
             }
             row--;
-            for(i=row-1;i>=rowStart;i--){
-                System.out.print(arr[i][colStart]+" ");
-                count++;
+            for(i = row-1;i>=rowStart && c<t;i--){
+                list.add(matrix[i][colStart]);
+                c++;
             }
             colStart++;
-
         }
-    }
+        System.out.println(list);
+        }
+
 }

@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 class MinHeapComparator implements Comparator<Integer>{
-
+    //o1 = child o2 = parent
     @Override
     public int compare(Integer o1, Integer o2) {
 //        if(o1<o2)
