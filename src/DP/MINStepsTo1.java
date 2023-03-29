@@ -2,7 +2,7 @@ package DP;
 
 import java.util.HashSet;
 
-public class MInStepsTo1 {
+public class MINStepsTo1 {
 
     // using recursion
     public static int countSteps(int n ){

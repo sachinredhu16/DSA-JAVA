@@ -41,11 +41,24 @@ public class Fibonacci {
         return arr[n];
     }
 
+    // below method is in constant space
+    public static int fab5(int n ){
+        int a =0;
+        int b =1;
+        for(int i=2;i<=n;i++){
+            int temp = a+b;
+            a =b;
+            b =temp;
+        }
+        return b;
+    }
+
 
     public static void main(String[] args) {
 
         System.out.println("using DP : "+fab4(500));
         System.out.println("using Memoization : "+fab2(500));
         System.out.println("using Recursion : "+fab1(40));
+        System.out.println("Using DP in Constant Space : "+fab5(500));
     }
 }
