@@ -1,25 +1,20 @@
-
-class Student{
-    public static void schoolName(){
-        System.out.println("School Name is A");
-    }
-    private void myName(){
-        System.out.println("My Name is A");
-    }
-}
-class Teacher extends Student{
-    public static void schoolName(){
-        System.out.println("School Name is B");
-    }
-    private void myName(){
-        System.out.println("My Name is B");
-    }
-}
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 
 public class Main {
      public static void main(String [] argh)
     {
-        Student.schoolName();
-        Teacher.schoolName();
+        HashSet<Integer> set = new HashSet<>();
+
+        HashMap<Integer,Integer> map = new HashMap<>();
+        map.put(10,10);
+        map.put(20,10);
+        map.put(30,10);
+        map.put(40,10);
+        Iterator<Integer> iterator = map.keySet().iterator();
+        while(iterator.hasNext())
+            System.out.print(iterator.next()+" ");
+
     }
 }
