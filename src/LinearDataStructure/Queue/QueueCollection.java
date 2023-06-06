@@ -2,7 +2,6 @@ package LinearDataStructure.Queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.concurrent.LinkedBlockingDeque;
 
 public class QueueCollection {
     public static void main(String[] args) {
